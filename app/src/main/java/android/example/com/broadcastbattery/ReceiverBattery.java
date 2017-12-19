@@ -17,5 +17,8 @@ public class ReceiverBattery extends BroadcastReceiver{
         else if(ACTION.equals("android.intent.action.ACTION_POWER_CONNECTED"))
             Toast.makeText(context,"Esta es la accion:\n"+ACTION,Toast.LENGTH_LONG).show();
 
+        Intent s1= new Intent(context,MyService.class);//no puedo usar this, se ha de utilizar el context
+        context.startService(s1);//igual, usar context
+
     }
 }

@@ -43,6 +43,10 @@ package="android.example.com.broadcastbattery">
             <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
         </intent-filter>
     </receiver>
-</application>
 
+    <service android:name=".MyService" android:process=":background">
+
+    </service>
+</application>
+    <uses-permission android:name="android.permission.BATTERY_STATS"></uses-permission>
 </manifest>
